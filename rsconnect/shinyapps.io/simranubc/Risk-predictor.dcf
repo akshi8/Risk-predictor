@@ -1,0 +1,13 @@
+name: Risk-predictor
+title: Risk-predictor
+username:
+account: simranubc
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 278302
+bundleId: 1217946
+url: https://simranubc.shinyapps.io/Risk-predictor/
+when: 1518379444.76918
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: eda.Rmd
