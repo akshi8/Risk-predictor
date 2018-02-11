@@ -1,0 +1,61 @@
+---
+  title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(data.table)
+library(lubridate)
+dat <- read_csv("data.csv")
+df <- dat %>% filter(Risk=="unknown_risk") %>% mutate(time_spent=period_to_seconds(hms(`Time_spent_chating_H:M`)))
+temp <- dat %>% filter(Risk!="unknown_risk")%>% mutate(time_spent=period_to_seconds(hms(`Time_spent_chating_H:M`)))
+dat2 <- rbind(temp,df[sample(1:nrow(df), 90),])
+test <- dat2 %>% filter(Risk=="unknown_risk") %>% mutate(Risk = '') %>% select(-User_ID,-`Time_spent_chating_H:M`, -Points_Rank,-Member_since) %>% as.tibble()
+train <- dat2 %>% filter(Risk!="unknown_risk")%>% select(-User_ID,-`Time_spent_chating_H:M`, -Points_Rank,-Member_since) %>% as.tibble()
+combine <- rbind(train,test)
+train = train %>% mutate_if(is.character, as.factor)
+test = test %>% mutate_if(is.character, as.factor)
+```
+
+```{r}
+# install.packages("randomForest")
+set.seed(123)
+library(randomForest)
+levels(test$Risk) = levels(train$Risk)
+levels(test$Verification) = levels(train$Verification)
+levels(test$Sexual_polarity) = levels(train$Sexual_polarity)
+levels(test$Sexual_orientation) = levels(train$Sexual_orientation)
+allvalues <- unique(union(test$Location,train$Location)) 
+train$Location <- factor(train$Location, levels = allvalues)
+levels(test$Location) = levels(train$Location)
+levels(test$Location) = levels(train$Location)
+combine = combine %>% mutate_if(is.character, as.factor)
+m <- randomForest(Risk ~ ., data = train, importance=TRUE, proximity=TRUE, ntree=22)
+# print(m)
+# predictedclass <- predict(m, newdata = test, type = "class")
+```
+
+```{r}
+output <- test
+pred <- predict(m,test)
+output$Risk <- pred
+output
+```
+
+```{r}
+plot(m)
+```
+
+```{r}
+varImpPlot(m,sort = TRUE,n.var = 6,main="Top 10 - Variable Importance")
+```
+
+```{r}
+ggplot(train,aes(x = Looking_for,color=Risk,y = Location)) + geom_jitter(alpha=0.7) + scale_color_manual(breaks = c('N','Y'),values = c("Green","Red"),labels = c('Not at Risk','At Risk')) + theme_minimal() + xlab("Looking For")
+```
+```{r}
+m
+```
+
