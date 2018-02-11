@@ -9,9 +9,9 @@ shinyUI(dashboardPage( skin = "blue",
                        dashboardSidebar(
                          
                          sidebarMenu(
-                           menuItem("Predict",tabName = "predict",icon = icon("map")),
+                           menuItem("Predict",tabName = "predict",icon = icon("bar-chart-o")),
                            # menuItem("Plot",tabName = "plot",icon = icon("dashboard")),
-                           menuItem("Data",tabName = "data",icon = icon("map")),
+                           menuItem("Data",tabName = "data",icon = icon("table")),
                            menuItem("Info",tabName = "info",icon = icon("info-circle"))
                          ),
                          sliderInput("age",
@@ -22,7 +22,7 @@ shinyUI(dashboardPage( skin = "blue",
                                      value = c(18,34),
                                      sep = ""),
                          sliderInput("last-login",
-                                     label = "Last Login range:",
+                                     label = "Last login: number of days ago",
                                      min =  1,
                                      max = 2402,
                                      step = 1,
@@ -34,12 +34,13 @@ shinyUI(dashboardPage( skin = "blue",
                        dashboardBody(
                          tabItems(
                            tabItem(tabName = "predict",
-                                 DT::dataTableOutput("prediction"),
+                                   plotOutput("thePlot"),
+                                 
                                  downloadButton("download1", "Download predictions"),
                                  hr(),
                                  br(),
                                  br(),
-                                 plotOutput("thePlot"),
+                                 DT::dataTableOutput("prediction"),
                                  tags$head(
                                    tags$link(rel = "stylesheet", type = "text/css", href = "custom.css")
                                  )

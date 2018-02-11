@@ -68,13 +68,13 @@ shinyServer(function(input,output) {
     #   xlab("year") + 
     #   ylab(paste0(input$parameter))
     
-    plot <- ggplot(predict_reactive(),aes(x = Looking_for,color=Risk,y = Location)) + 
+    plot <- ggplot(predict_reactive(),aes(x = Looking_for ,color=Risk,y = Location)) + 
       geom_jitter(alpha=0.7) + 
       scale_color_manual(breaks = c('N','Y'),
                          values = c("Green","Red"),
                          labels = c('Not at Risk','At Risk')) + 
       theme_minimal() + 
-      xlab("Looking For")
+      xlab("Looking For") +labs("Risk of getting involved in unsolicited online sex-work")
 
     
     plot
