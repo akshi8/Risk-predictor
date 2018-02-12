@@ -18,7 +18,7 @@
 
 ## Inspiration 💡
 
-This app has been developed in order to predict the risk for an individual to be a victim of online sex trade or getting drawn into online sex work. A lot of users on adult website fall prey to the sex-trade and human trafficking and online platforms contribute almost 50% of sex-trade venue. Sex trafficking and child pornography are very big issues and gross violation of humanity. This analysis deployed on the WebApp can be used by law enforcement bodies (Police), social groups, college authorities to gauge the effect of certain individuals based on their online activity on such sites to protect them from the harm of sex-trade and potential drug abuse.❤️ 
+This app has been developed in order to predict the risk for an individual to be a victim of online sex trade or getting drawn into online sex work. A lot of users on adult website fall prey to the sex-trade and human trafficking and online platforms contribute almost 50% of sex-trade venue [:source](https://www.dailydot.com/irl/sex-industry-internet-online-report/). Sex trafficking and child pornography are very big issues and gross violation of humanity. This analysis deployed on the WebApp can be used by law enforcement bodies (Police), social groups, college authorities to gauge the effect of certain individuals based on their online activity on such sites to protect them from the harm of sex-trade and potential drug abuse.❤️ 
 
 ## What does the App do?
 
