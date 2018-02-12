@@ -64,4 +64,4 @@ Also, We will be using a web-API to extract data for predicting some individual 
 
 ## Additional Stats 
 
-[](trade_venue.PNG)
+![](trade_venue.PNG)
