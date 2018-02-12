@@ -14,7 +14,7 @@
 
 ## WebApp
 
-* The app can be found at : [Online Sex-Work Risk Predictor](https://akshi8.shinyapps.io/Risk-predictor/)
+* The app can be found at : [Online Sex-Work Risk Predictor](https://simranubc.shinyapps.io/Risk-predictor/)
 
 ## Inspiration 💡
 
