@@ -2,10 +2,6 @@
 
 ##### Topic: Predict risk of falling prey to online Sex Trade
 
-## Contributers
-
-* Akshi Chaudhary : [@akshi](https://github.com/akshi8/Risk-predictor)
-* Simran Sethi : [@Simran](https://github.com/simrnsethi/Risk-predictor)
 
 ## Event
 
