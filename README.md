@@ -5,7 +5,7 @@
 
 ## Event
 
-* `Hack For Humanity` [Girls in Tech](https://gitvan2018.devpost.com/)
+* Hack For Humanity [Girls in Tech](https://devpost.com/software/online-sex-work-risk-prediction)
 * 24 hour Hackathon on data science for social good
 
 ## WebApp
@@ -37,7 +37,6 @@ It predicts the risk of an innocent individual (on an adult website) falling pre
 - The final web-app is deployed using shiny library in R
 
 ## Challenges we ran into 🚵
-♀️
 
 - Inadequate data
 - Anonymized data-fields
