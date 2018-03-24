@@ -1,6 +1,6 @@
 # Online Sex-Work Risk Predictor
 
-##### Topic: Predict risk of falling prey to online Sex Trade
+#### Topic: Predict risk of falling prey to online Sex Trade
 
 
 ## Event
@@ -14,7 +14,7 @@
 
 ## Inspiration 💡
 
-This app has been developed in order to predict the risk for an individual to be a victim of online sex trade or getting drawn into online sex work. A lot of users on adult website fall prey to the sex-trade and human trafficking and online platforms contribute almost 50% of sex-trade venue [:source](https://www.dailydot.com/irl/sex-industry-internet-online-report/). Sex trafficking and child pornography are very big issues and gross violation of humanity. This analysis deployed on the WebApp can be used by law enforcement bodies (Police), social groups, college authorities to gauge the effect of certain individuals based on their online activity on such sites to protect them from the harm of sex-trade and potential drug abuse.❤️ 
+This app has been developed in order to predict the risk for an individual to be a victim of online sex trade or getting drawn into online sex work. A lot of users on adult website fall prey to the sex-trade and human trafficking and online platforms contribute almost 50% of sex-trade venue [source](https://www.dailydot.com/irl/sex-industry-internet-online-report/). Sex trafficking and child pornography are very big issues and gross violation of humanity. This analysis deployed on the WebApp can be used by law enforcement bodies (Police), social groups, college authorities to gauge the effect of certain individuals based on their online activity on such sites to protect them from the harm of sex-trade and potential drug abuse. ❤️ 
 
 ## What does the App do?
 
@@ -27,13 +27,13 @@ It predicts the risk of an innocent individual (on an adult website) falling pre
 
 - Using R for data wrangling and data cleaning as data from this websites can be high anonymized and messy.
     - User profile data has the following fields which were used in the prediction
-     * Gender,Age,Location,Verification
-     * Sexual_orientation	,Sexual_polarity,Looking_for	
-     * Last_login,Number_of_Comments_in_public_forum, Time_spent_chating
+     * Gender, Age, Location, Verification
+     * Sexual_orientation, Sexual_polarity,Looking_for	
+     * Last_login, Number_of_Comments_in_public_forum, Time_spent_chating
      * Number_of_offline_meetings_attended	
      * Profile_pictures
 
-- The prediction is done through a machine learning classifier `Random Forest` in R 
+- The prediction is done through a machine learning classifier "Random Forest" in R 
 - The final web-app is deployed using shiny library in R
 
 ## Challenges we ran into 🚵
