@@ -13,5 +13,5 @@ library("DT")
 library('dplyr')
 library('markdown')
 library('tidyr')
-
+library(plotly)
 dat <- read_csv("data.csv")

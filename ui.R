@@ -1,5 +1,5 @@
 # UI file for shiny
-
+library(plotly)
 shinyUI(dashboardPage( skin = "blue",
                        
                        #Application title
